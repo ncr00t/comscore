@@ -3,6 +3,8 @@ class Company < ApplicationRecord
 
   before_create :set_slug
 
+  default_scope { order(name: :asc) }
+
   def set_slug
     self.slug = self.name.parameterize
   end
