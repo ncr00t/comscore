@@ -32,7 +32,7 @@ module Api
       def destroy
         company = Company.find_by(slug: params[:slug])
         if company.destroy
-          render json: serialize(company, CompanySerializer)
+          head :no_content
         else
           render json: { error: company.errors.messages }, status: 422
         end
