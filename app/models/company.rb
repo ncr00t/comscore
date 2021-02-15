@@ -9,7 +9,9 @@ class Company < ApplicationRecord
     self.slug = self.name.parameterize
   end
 
-  def calculate_rank(precision: 2)
+  def average_rank(precision: 2)
+    return 0 if reviews.count.zero?
+
     avg_rank = reviews.average(:rank)
     avg_rank.round(precision).to_f
   end
