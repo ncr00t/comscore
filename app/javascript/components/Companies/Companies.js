@@ -1,6 +1,34 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Company from "./Company";
+import styled from 'styled-components'
+
+const Main = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  margin-width: 1200px;
+  text-align: center;
+`
+const Header = styled.div`
+ h1 {
+   font-size: 40px;
+ }
+
+ padding: 100px 100px 10px 100px;
+`
+
+const Description = styled.div`
+  font-size: 25px;
+  font-weight: 300;
+`
+
+const CompaniesList = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  width: 100%;
+  padding: 20px;
+`
 
 const Companies = () => {
     const [companies, setCompanies] = useState([])
@@ -17,14 +45,15 @@ const Companies = () => {
     })
 
     return (
-        <div className="main">
-            <div className="header">
+        <Main>
+            <Header>
                 <h1>ComScore</h1>
-            </div>
-            <div className="companiesList">
-                <ul>{companiesList}</ul>
-            </div>
-        </div>
+            <Description>Evaluate, share your reviews and choose the best companies!</Description>
+            </Header>
+            <CompaniesList>
+                {companiesList}
+            </CompaniesList>
+        </Main>
     )
 }
 
