@@ -9,7 +9,7 @@ Usage
 
    git clone https://github.com/ncr00t/comscore.git
 
-2. rails db:create db:migrate
+2. rails db:create db:migrate db:seed
 
 3. rails s
 
