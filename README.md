@@ -1,24 +1,19 @@
-# README
+# Comscore
+Comscore - Web application for comparing different companies by ratings and reviews. (Ruby, Ruby on Rails, PostgreSQL, React)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Getting Started
+These instructions will get you a copy of the project up and running on your local machine
 
-Things you may want to cover:
+Usage
+1. Clone the repository
 
-* Ruby version
+   git clone https://github.com/ncr00t/comscore.git
 
-* System dependencies
+2. rails db:create db:migrate
 
-* Configuration
+3. rails s
 
-* Database creation
+# License
 
-* Database initialization
+Copyright (c) 2021 Ivanisenko Roman Licensed under the [MIT license](LICENSE).
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
