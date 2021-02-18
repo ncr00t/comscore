@@ -35,7 +35,7 @@ const Companies = () => {
 
     useEffect(() => {
         axios.get('/api/v1/companies.json')
-             .then(resp => { setCompanies(resp.data.data) })
+             .then(resp => setCompanies(resp.data.data))
              .catch(resp => console.log(resp))
     }, [companies.length])
 
