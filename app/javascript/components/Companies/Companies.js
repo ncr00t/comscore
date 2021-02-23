@@ -47,7 +47,7 @@ const Companies = () => {
     return (
         <Main>
             <Header>
-                <h1>ComScore</h1>
+                <h1>Comscore</h1>
             <Description>Evaluate, share your reviews and choose the best companies!</Description>
             </Header>
             <CompaniesList>
