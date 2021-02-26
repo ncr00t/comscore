@@ -2,12 +2,11 @@ module Api
   module V1
     class CompaniesController < ApplicationController
       def index
-        companies = Company.all
+        companies = Company.includes(:reviews)
         render json: serialize(companies, CompanySerializer, options)
       end
 
       def show
-        company = Company.find_by(slug: params[:slug])
         render json: serialize(company, CompanySerializer, options)
       end
 
@@ -21,7 +20,6 @@ module Api
       end
 
       def update
-        company = Company.find_by(slug: params[:slug])
         if company.update(company_params)
           render json: serialize(company, CompanySerializer, options)
         else
@@ -30,7 +28,6 @@ module Api
       end
 
       def destroy
-        company = Company.find_by(slug: params[:slug])
         if company.destroy
           head :no_content
         else
@@ -42,6 +39,10 @@ module Api
 
       def company_params
         params.require(:company).permit(:name, :logo_url)
+      end
+
+      def company
+        @company ||= Company.includes(:reviews).find_by(slug: params[:slug])
       end
 
       def options
