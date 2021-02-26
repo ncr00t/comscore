@@ -1,6 +1,8 @@
 # About the Comscore
 Comscore - Web application for comparing different companies by ratings and reviews. (Ruby, Ruby on Rails, PostgreSQL, React)
 
+![home_page](https://user-images.githubusercontent.com/12431839/109239532-b18e2b80-77e6-11eb-9b9d-215b8962a45e.png)
+
 # Environment configuration:
 
 * Rails version: 6.1.1.1
