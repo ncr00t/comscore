@@ -47,6 +47,11 @@ edit_api_v1_company  GET    /api/v1/companies/:slug/edit(.:format) api/v1/compan
       api_v1_review  DELETE /api/v1/reviews/:id(.:format)          api/v1/reviews#destroy
 ```
 
+# Third Party Serializer (faster than Active Model Serializer)
+
+This application using  Fast JSON API [gem fast_jsonapi](https://github.com/Netflix/fast_jsonapi) from Netflix company.  
+[Serialization time is at least 25 times faster than Active Model Serializers on up to current benchmark of 1000 records.](https://github.com/Netflix/fast_jsonapi/blob/master/performance_methodology.md)
+
 # License
 
 Copyright (c) 2021 Ivanisenko Roman Licensed under the [MIT license](LICENSE).
